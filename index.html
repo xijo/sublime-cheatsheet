@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+  <meta charset="utf-8">
+  <title></title>
+  <script   src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous"></script>
+
+  <style type="text/css">
+    @media print {
+      tr:nth-child(odd) td, tr:nth-child(odd) th {
+        background-color: #f9f9f9 !important;
+        background-color: #EFEFEF !important;
+        -webkit-print-color-adjust: exact;
+      }
+      .hidden-on-print {
+        display: none;
+      }
+    }
+
+    body {
+      font-family: Hack;
+      font-size: 1.35rem;
+    }
+
+    table {
+      margin-bottom: 0 !important;
+    }
+
+    td:first-child {
+      white-space: nowrap;
+    }
+
+    span.plus {
+      margin-left: 3px;
+      margin-right: 3px;
+    }
+    span.or {
+      margin-left: 3px;
+      margin-right: 3px;
+      color: #ddd;
+    }
+
+    kbd {
+      display: inline-block;
+      margin: 0 .1em;
+      padding: .1em .6em;
+      font-size: 11px;
+      line-height: 1.4;
+      color: #242729;
+      background-color: white;
+      border: 1px solid #adb3b9;
+      border-radius: 3px;
+      box-shadow: 0 1px 0 rgba(12,13,14,0.2),0 0 0 2px #FFF inset;
+      white-space: nowrap;
+      -webkit-print-color-adjust: exact;
+    }
+  </style>
+</head>
+<body>
+
+<script type="text/javascript">
+  function setCtrl(key) {
+    $('kbd[data-ctrl]').html(key)
+  }
+</script>
+
+<div style='position: absolute; right: 0; top: 0'>
+  <image src="betterplace.svg" height=37px />
+</div>
+
+<div class='hidden-on-print' style='position: absolute; bottom: 0; right: 0'>
+  <a href="#" onclick="setCtrl('cmd')">Mac</a>
+  <a href="#" onclick="setCtrl('ctrl')">Windows</a>
+</div>
+
+<h1 style='font-size: 20px; margin-left: 8px'>Sublime Text 101</h1>
+
+<table class="table table-striped">
+  <!-- basics -->
+  <tr>
+    <th colspan=2>Basics</th>
+  </tr>
+  <tr>
+    <td>
+      <kbd data-ctrl>ctrl</kbd>
+      <span class='plus'>+</span>
+      <kbd>c</kbd>
+    </td>
+    <td>Copy current selection or line</td>
+  </tr>
+  <tr>
+    <td>
+      <kbd data-ctrl>ctrl</kbd>
+      <span class='plus'>+</span>
+      <kbd>v</kbd>
+    </td>
+    <td>Paste clipboard to current position</td>
+  </tr>
+  <tr>
+    <td>
+      <kbd data-ctrl>ctrl</kbd>
+      <span class='plus'>+</span>
+      <kbd>x</kbd>
+    </td>
+    <td>Cut current selection or line</td>
+  </tr>
+  <tr>
+    <td>
+      <kbd data-ctrl>ctrl</kbd>
+      <span class='plus'>+</span>
+      <kbd>n</kbd>
+    </td>
+    <td>Open new file</td>
+  </tr>
+  <tr>
+    <td>
+      <kbd data-ctrl>ctrl</kbd>
+      <span class='plus'>+</span>
+      <kbd>s</kbd>
+    </td>
+    <td>Save current file</td>
+  </tr>
+  <tr>
+    <td>
+      <kbd data-ctrl>ctrl</kbd>
+      <span class='plus'>+</span>
+      <kbd>f</kbd>
+    </td>
+    <td>Find in current file</td>
+  </tr>
+  <tr>
+    <td>
+      <kbd data-ctrl>ctrl</kbd>
+      <span class='plus'>+</span>
+      <kbd>shift</kbd>
+      <span class='plus'>+</span>
+      <kbd>f</kbd>
+    </td>
+    <td>Find in all files</td>
+  </tr>
+
+  <!-- movement -->
+  <tr>
+    <th colspan=2>Movement</th>
+  </tr>
+  <tr>
+    <td>
+      <kbd data-ctrl>ctrl</kbd>
+      <span class='plus'>+</span>
+      <kbd>←</kbd>
+      <kbd>→</kbd>
+    </td>
+    <td>Jump between words</td>
+  </tr>
+  <tr>
+    <td>
+      <kbd data-ctrl>pos1</kbd>
+      <span class='or'>/</span>
+      <kbd>end</kbd>
+    </td>
+    <td>Jump between start and end of line</td>
+  </tr>
+
+  <!-- selecting text -->
+  <tr>
+    <th colspan=2>Selecting text</th>
+  </tr>
+  <tr>
+    <td>
+      <kbd data-ctrl>ctrl</kbd>
+      <span class='plus'>+</span>
+      <kbd>d</kbd>
+    </td>
+    <td>Select word / select more occurrences</td>
+  </tr>
+  <tr>
+    <td>
+      <kbd data-ctrl>ctrl</kbd>
+      <span class='plus'>+</span>
+      <kbd>l</kbd>
+    </td>
+    <td>Select whole line</td>
+  </tr>
+  <tr>
+    <td>
+      <kbd data-ctrl>ctrl</kbd>
+      <span class='plus'>+</span>
+      <kbd>shift</kbd>
+      <span class='plus'>+</span>
+      <kbd>↑</kbd>
+      <kbd>↓</kbd>
+    </td>
+    <td>Move selection up or down</td>
+  </tr>
+  <tr>
+    <td>
+      <kbd data-ctrl>ctrl</kbd>
+      <span class='plus'>+</span>
+      <kbd>alt</kbd>
+      <span class='plus'>+</span>
+      <kbd>↑</kbd>
+      <kbd>↓</kbd>
+    </td>
+    <td>Open multiple carets</td>
+  </tr>
+</table>
+
+<div style='float: right; font-size: 10px; color: #ccc'>
+  github.com/xijo/sublime-cheatsheet
+</div>
+</body>
+</html>
